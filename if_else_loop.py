@@ -1,20 +1,12 @@
 try:
-    x1 = (int(input('Enter the first number: ')))
-    x2 = (int(input('Enter the second number: ')))
-
-    if x1 > x2:
-        x1, x2 = x2, x1
-    sum = 0
-    for x in range(x1, x2 + 1):
-        sum += x
-        x += 1
-
-    print('Sum of all integers between', x1, 'and', x2, 'including them is: ', sum)
-
-    numbers = list(range(x1, x2+1))
-    count = len (numbers)
-    avg = (sum / count)
-    print ('Average of all integers between', x1, 'and', x2, 'including them is: ', avg)
+    n = int(input('Введіть число, факторіал якого треба знайти: '))
+    def factorial_iterative(n):
+        result = 1
+        for i in range(1, n + 1):
+            result *= i
+        return result
+    result = factorial_iterative(n)
+    print(result)  # Виведе: 120
 
 except Exception as e:
     print (e)
